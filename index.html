@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="bt">Clique-me!</button>
+    <div id="container">
+
+    </div>
+    <script>
+        var divContainer = document.getElementById("container")
+        divContainer.style.height = "800px"
+        divContainer.style.width = "800px"
+        divContainer.style.backgroundColor = "gray"
+
+        var botao = document.getElementById("bt")
+        botao.onclick = function() {
+            var divQuadro = document.createElement("div")
+            divQuadro.style.height = "150px"
+            divQuadro.style.width = "200px"
+            divQuadro.style.backgroundColor = "blue"
+            divQuadro.style.display = "inline-block"
+            divContainer.appendChild(divQuadro) 
+
+            divQuadro.onmouseover = function() {
+                divQuadro.style.backgroundColor = "red"
+            }
+
+            divQuadro.onmouseout = function() {
+                divQuadro.style.backgroundColor = "blue"
+            }
+        }
+    </script>
+</body>
+</html>
